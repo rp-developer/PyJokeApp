@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+
+{% block body %}
+<p> Welcome to the joke app! </p>
+<form action="{{url_for('get_joke')}}" method="get">
+    <button type="submit">Tell me a Joke!</button>
+</form>
+{% if joke %}
+<p><strong> Joke: </strong> {{joke}}</p>
+{% endif %}
+
+{%endblock %}
