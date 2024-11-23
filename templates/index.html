@@ -2,11 +2,18 @@
 
 {% block body %}
 <p> Welcome to the joke app! </p>
-<form action="{{url_for('get_joke')}}" method="get">
-    <button type="submit">Tell me a Joke!</button>
+<form action="{{url_for('get_programming_joke')}}" method="get">
+    <button type="submit">Tell me a Programming Joke!</button>
 </form>
-{% if joke %}
-<p><strong> Joke: </strong> {{joke}}</p>
-{% endif %}
 
+<form action="{{url_for('get_dad_joke')}}" method="get">
+    <button type="submit">Get regular joke</button>
+</form>
+
+{% if programmingJoke %}
+<p><strong> Programming Joke</strong>  {{  programmingJoke }}</p>
+{%endif%}
+{% if dadJoke %}
+<p><strong> Dad Joke: </strong> {{dadJoke}}</p>
+{% endif %}
 {%endblock %}
