@@ -59,4 +59,4 @@ def get_dad_joke():
     random_dad_joke = DadJoke.query.order_by(db.func.random()).first()
     return render_template("index.html", dadJoke=random_dad_joke.joke)
 if __name__ == "__main__":
-      app.run(debug=True)
+      app.run(host='0.0.0.0', port=8000)
